@@ -9,7 +9,7 @@ $(document).ready(function() {
       //   document.getElementById('data-zone1').innerHTML = "Backers = " + backers;
       //   document.getElementById('data-zone2').innerHTML = "Pledged = " + pledged;
       // });
-      
+
       //edit
 
       setInterval(function()
@@ -22,7 +22,7 @@ $(document).ready(function() {
           var backers = result.project.backers_count;
           var pledged = result.project.pledged;
           var time = result.project.state_changed_at;
-          //console.log(", History Poster, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+          console.log(", History Poster, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
           document.getElementById('data-zone1').innerHTML = "Backers = " + backers;
           document.getElementById('data-zone2').innerHTML = "Pledged = " + pledged;
         });
@@ -35,7 +35,7 @@ $(document).ready(function() {
           var backers = result.project.backers_count;
           var pledged = result.project.pledged;
           var time = result.project.state_changed_at;
-          //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+          console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
           document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
           document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
         });
@@ -49,8 +49,8 @@ $(document).ready(function() {
           var pledged = result.project.pledged;
           var time = result.project.state_changed_at;
           //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
-          document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
-          document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
+          document.getElementById('data-zone5').innerHTML = "Backers = " + backers;
+          document.getElementById('data-zone6').innerHTML = "Pledged = " + pledged;
         });
 
         //Project 4
