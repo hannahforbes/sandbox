@@ -10,19 +10,6 @@ $(document).ready(function() {
       //   document.getElementById('data-zone2').innerHTML = "Pledged = " + pledged;
       // });
 
-            // Constructor function
-      function CustomObject(dataUrl) {
-          var that = this;
-
-          $.ajax(dataUrl, {
-              success: function (json) {
-                  that.data = $.parseJSON(json);
-              }
-          });
-      }
-
-      // Creating new custom object
-      var myObject = new CustomObject('http://.....');
 
       setInterval(function()
       {
@@ -52,57 +39,57 @@ $(document).ready(function() {
           document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
         });
 
-        //Project 3
-        $.ajax({
-          url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
-          context: document.body
-        }).done(function(result) {
-          var backers = result.project.backers_count;
-          var pledged = result.project.pledged;
-          var time = result.project.state_changed_at;
-          //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
-          document.getElementById('data-zone5').innerHTML = "Backers = " + backers;
-          document.getElementById('data-zone6').innerHTML = "Pledged = " + pledged;
-        });
-
-        //Project 4
-        $.ajax({
-          url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
-          context: document.body
-        }).done(function(result) {
-          var backers = result.project.backers_count;
-          var pledged = result.project.pledged;
-          var time = result.project.state_changed_at;
-          //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
-          document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
-          document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
-        });
-
-        //Project 5
-        $.ajax({
-          url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
-          context: document.body
-        }).done(function(result) {
-          var backers = result.project.backers_count;
-          var pledged = result.project.pledged;
-          var time = result.project.state_changed_at;
-          //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
-          document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
-          document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
-        });
-
-        //Project 6
-        $.ajax({
-          url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
-          context: document.body
-        }).done(function(result) {
-          var backers = result.project.backers_count;
-          var pledged = result.project.pledged;
-          var time = result.project.state_changed_at;
-          //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
-          document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
-          document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
-        });
+        // //Project 3
+        // $.ajax({
+        //   url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
+        //   context: document.body
+        // }).done(function(result) {
+        //   var backers = result.project.backers_count;
+        //   var pledged = result.project.pledged;
+        //   var time = result.project.state_changed_at;
+        //   //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+        //   document.getElementById('data-zone5').innerHTML = "Backers = " + backers;
+        //   document.getElementById('data-zone6').innerHTML = "Pledged = " + pledged;
+        // });
+        //
+        // //Project 4
+        // $.ajax({
+        //   url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
+        //   context: document.body
+        // }).done(function(result) {
+        //   var backers = result.project.backers_count;
+        //   var pledged = result.project.pledged;
+        //   var time = result.project.state_changed_at;
+        //   //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+        //   document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
+        //   document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
+        // });
+        //
+        // //Project 5
+        // $.ajax({
+        //   url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
+        //   context: document.body
+        // }).done(function(result) {
+        //   var backers = result.project.backers_count;
+        //   var pledged = result.project.pledged;
+        //   var time = result.project.state_changed_at;
+        //   //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+        //   document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
+        //   document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
+        // });
+        //
+        // //Project 6
+        // $.ajax({
+        //   url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
+        //   context: document.body
+        // }).done(function(result) {
+        //   var backers = result.project.backers_count;
+        //   var pledged = result.project.pledged;
+        //   var time = result.project.state_changed_at;
+        //   //console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+        //   document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
+        //   document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
+        // });
       }, 1000) //10000 = 10s
 
     });
