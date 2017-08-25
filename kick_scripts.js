@@ -32,19 +32,19 @@ $(document).ready(function() {
         });
       }
       dataKickstarter($('#data-zone1').attr('data-url'), 'History Poster', 'data-zone1', 'data-zone2');
-
+      dataKickstarter($('#data-zone3').attr('data-url'), 'Sun Spots', 'data-zone3', 'data-zone4');
         //Sun Spots
-        $.ajax({
-          url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
-          context: document.body
-        }).done(function(result) {
-          var backers = result.project.backers_count;
-          var pledged = result.project.pledged;
-          var time = result.project.state_changed_at;
-          console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
-          document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
-          document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
-        });
+        // $.ajax({
+        //   url: "https://www.kickstarter.com/projects/1421716661/sun-spots-a-print-portfolio/stats.json?v=1",
+        //   context: document.body
+        // }).done(function(result) {
+        //   var backers = result.project.backers_count;
+        //   var pledged = result.project.pledged;
+        //   var time = result.project.state_changed_at;
+        //   console.log(", Sun Spots, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+        //   document.getElementById('data-zone3').innerHTML = "Backers = " + backers;
+        //   document.getElementById('data-zone4').innerHTML = "Pledged = " + pledged;
+        // });
 
         // //Project 3
         // $.ajax({
