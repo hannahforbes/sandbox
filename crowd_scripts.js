@@ -21,6 +21,6 @@ $(document).ready(function() {
       dataKickstarter($('#data-zone7').attr('data-url'), 'Apricoat', 'data-zone7', 'data-zone8');
       dataKickstarter($('#data-zone9').attr('data-url'), 'Nise Wave', 'data-zone9', 'data-zone10');
       dataKickstarter($('#data-zone11').attr('data-url'), 'Wooden World Watch', 'data-zone11', 'data-zone12');
-    }, 10000) //10000 = 10s
+    }, 100) //10000 = 10s
 
 });
