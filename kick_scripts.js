@@ -14,20 +14,24 @@ $(document).ready(function() {
       setInterval(function()
       {
         //World History Poster
-        var dataUrl = $('#data-zone1').attr('data-url');
+        // var dataUrl = $('#data-zone1').attr('data-url');
+        function dataKickstarter(dataUrl, projectName, dataZone1, dataZone2){
         $.ajax({
           url: dataUrl,
           context: document.body
         }).done(function(result) {
-          var dataZone1 = 'data-zone1';
-          var dataZone2 = 'data-zone2';
+          // var projectName = 'History Poster'
+          // var dataZone1 = 'data-zone1';
+          // var dataZone2 = 'data-zone2';
           var backers = result.project.backers_count;
           var pledged = result.project.pledged;
           var time = result.project.state_changed_at;
-          console.log(", History Poster, ", "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+          console.log(", " + projectName + ", " + "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
           document.getElementById(dataZone1).innerHTML = "Backers = " + backers;
           document.getElementById(dataZone2).innerHTML = "Pledged = " + pledged;
         });
+      }
+      dataKickstarter($('#data-zone1').attr('data-url'), 'History Poster', 'data-zone1', 'data-zone2');
 
         //Sun Spots
         $.ajax({
