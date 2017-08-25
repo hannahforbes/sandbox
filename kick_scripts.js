@@ -9,6 +9,8 @@ $(document).ready(function() {
       //   document.getElementById('data-zone1').innerHTML = "Backers = " + backers;
       //   document.getElementById('data-zone2').innerHTML = "Pledged = " + pledged;
       // });
+      
+      //edit
 
       setInterval(function()
       {
