@@ -20,6 +20,6 @@ $(document).ready(function() {
       dataKickstarter('kellideas','turtle-rover-worlds-first-earth-rover', 'Turtle Rover', 'data-zone3', 'data-zone4', 'data-zoneB');
       dataKickstarter('robjmadin','steamroller-album', 'Steam Roller', 'data-zone5', 'data-zone6', 'data-zoneC');
       dataKickstarter('opengoldberg', 'libre-art-of-the-fugue', 'Libre Art of the Fugure', 'data-zone7', 'data-zone8', 'data-zoneD');
-    }, 1000) //10000 = 10s
+    }, 60000) //10000 = 10s
 
 });
