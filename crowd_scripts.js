@@ -47,13 +47,14 @@ $(document).ready(function() {
     }
   }
 
-  //implifies/shortens name for data entry
+  //Simplifies/shortens name for data entry
   function projSimpleName(projName) {
     var projNameSplit = projName.split(/\s*\-\s*/g);
     return projNameSplit[0];
   }
 
-  function dataKickstarter(projectCreator, projectTitle, projectName, dataZone1, dataZone2, dataZone3) {
+  //function dataKickstarter(projectCreator, projectTitle, projectName, dataZone1, dataZone2, dataZone3) {
+  function dataKickstarter(projectCreator, projectTitle, projectName, dataZone1, dataZone2) {
     $.ajax({
       url: 'https://www.kickstarter.com/projects/' + projectCreator + '/' + projectTitle + '/stats.json',
       context: document.body
@@ -61,24 +62,21 @@ $(document).ready(function() {
       var backers = result.project.backers_count;
       var pledged = result.project.pledged;
       var time = result.project.state_changed_at;
-      console.log(", " + projectName + ", " + backers + ", ", +pledged);
+      console.log(", " + projectName + ", " + backers + ", ", + pledged);
       document.getElementById(dataZone1).innerHTML = "Backers = " + backers;
       document.getElementById(dataZone2).innerHTML = "Pledged = " + pledged;
-      document.getElementById(dataZone3).innerHTML = projectName;
+      //document.getElementById(dataZone3).innerHTML = projectName;
     });
   }
-  dataKickstarter(projCreatorToUrl(projectCreators[0]), projTitleToUrl(projectTitles[0]), projSimpleName(projectTitles[0]), 'data-zone1', 'data-zone2', 'data-zoneA');
-  dataKickstarter(projCreatorToUrl(projectCreators[1]), projTitleToUrl(projectTitles[1]), projSimpleName(projectTitles[1]), 'data-zone3', 'data-zone4', 'data-zoneB');
-  dataKickstarter(projCreatorToUrl(projectCreators[2]), projTitleToUrl(projectTitles[2]), projSimpleName(projectTitles[2]), 'data-zone5', 'data-zone6', 'data-zoneC');
-  dataKickstarter(projCreatorToUrl(projectCreators[3]), projTitleToUrl(projectTitles[3]), projSimpleName(projectTitles[3]), 'data-zone7', 'data-zone8', 'data-zoneD');
 
-
+  for (i = 0; (i < projectTitles.length); i++) {
+    dataKickstarter(projCreatorToUrl(projectCreators[i]), projTitleToUrl(projectTitles[i]), projSimpleName(projectTitles[i]), 'data-zone' + i, 'data-zone' + i + 'A');
+  }
 
   setInterval(function() {
-    dataKickstarter(projCreatorToUrl(projectCreators[0]), projTitleToUrl(projectTitles[0]), projSimpleName(projectTitles[0]), 'data-zone1', 'data-zone2', 'data-zoneA');
-    dataKickstarter(projCreatorToUrl(projectCreators[1]), projTitleToUrl(projectTitles[1]), projSimpleName(projectTitles[1]), 'data-zone3', 'data-zone4', 'data-zoneB');
-    dataKickstarter(projCreatorToUrl(projectCreators[2]), projTitleToUrl(projectTitles[2]), projSimpleName(projectTitles[2]), 'data-zone5', 'data-zone6', 'data-zoneC');
-    dataKickstarter(projCreatorToUrl(projectCreators[3]), projTitleToUrl(projectTitles[3]), projSimpleName(projectTitles[3]), 'data-zone7', 'data-zone8', 'data-zoneD');
-  }, 1000) //10000 = 10s, 60000 = 1m, 3600000 = 1h, 86400000 = 1d
+    for (i = 0; (i < projectTitles.length); i++) {
+      dataKickstarter(projCreatorToUrl(projectCreators[i]), projTitleToUrl(projectTitles[i]), projSimpleName(projectTitles[i]), 'data-zone' + i, 'data-zone' + i + 'A');
+    }
+  }, 10000) //10000 = 10s, 60000 = 1m, 3600000 = 1h, 86400000 = 1d
 
 });
