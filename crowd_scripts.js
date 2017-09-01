@@ -16,11 +16,11 @@ $(document).ready(function() {
         });
       }
       dataKickstarter('mattbaker','timeline-of-world-history-poster-projects-of-earth', 'History Poster', 'data-zone1', 'data-zone2');
-      // dataKickstarter($('#data-zone3').attr('data-url'), 'Sun Spots', 'data-zone3', 'data-zone4');
+      dataKickstarter('kellideas','turtle-rover-worlds-first-earth-rover', 'Turtle Rover', 'data-zone3', 'data-zone4');
       // dataKickstarter($('#data-zone5').attr('data-url'), 'Orrery Lamp', 'data-zone5', 'data-zone6');
       // dataKickstarter($('#data-zone7').attr('data-url'), 'Apricoat', 'data-zone7', 'data-zone8');
       // dataKickstarter($('#data-zone9').attr('data-url'), 'Nise Wave', 'data-zone9', 'data-zone10');
       // dataKickstarter($('#data-zone11').attr('data-url'), 'Wooden World Watch', 'data-zone11', 'data-zone12');
-    }, 10000) //10000 = 10s
+    }, 1000) //10000 = 10s
 
 });
