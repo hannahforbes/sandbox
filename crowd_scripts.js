@@ -2,10 +2,19 @@ $(document).ready(function() {
 
   //KS Info
   var projectInfo = [
+    //Project names need all other punctuation (colons, exclataion points, full stops, commas etc.) removing
+    //and can not be over 50 characters
+    //Take "&" out of any project creator names
     ["Matt Baker", "Timeline of World History Poster - Projects of Earth"],
     ["Kell Ideas", "Turtle Rover - World's First Earth Rover"],
     ["Rob J Madin", "Steamroller Album"],
-    ["Open Goldberg", "Libre Art of the Fugue"]
+    ["Open Goldberg", "Libre Art of the Fugue"],
+    ["Wooden Overcoats", "Wooden Overcoats Fund Season 3"],
+    ["The Cleaver Quarterly", "The Illustrated Wok Chinese food like you've never"],
+    ["Biliana Marina Grozdanova", "Golden Tracks a documentary series"],
+    ["Comite de Proyectos", "Lampara Binomios"],
+    ["Bandido Studio", "DEBORAH a pendant lamp"],
+    ["Timothy Davis", "Yewood Guard Simple Adaptable Wooden Mudguards Fen"]
   ]
   // var projectCreators = ['Matt Baker', 'Kell Ideas', 'Rob J Madin', 'Open Goldberg'];
   // var projectTitles = ["Timeline of World History Poster - Projects of Earth", "Turtle Rover - World's First Earth Rover", "Steamroller Album", "Libre Art of the Fugue"];
@@ -67,24 +76,26 @@ $(document).ready(function() {
       var time = result.project.state_changed_at;
       console.log(", " + projectName + ", " + backers + ", ", +pledged);
       //Inserting on HTML Page
-      document.getElementById(dataZone1).innerHTML = projectName;
-      document.getElementById(dataZone2).innerHTML = "Backers = " + backers;
-      document.getElementById(dataZone3).innerHTML = "Pledged = " + pledged;
+      // document.getElementById(dataZone1).innerHTML = projectName;
+      // document.getElementById(dataZone2).innerHTML = "Backers = " + backers;
+      // document.getElementById(dataZone3).innerHTML = "Pledged = " + pledged;
     });
   }
 
   for (i = 0;
     (i < projectInfo.length); i++) {
     dataKickstarter(projCreatorToUrl(projectInfo[i][0]), projTitleToUrl(projectInfo[i][1]), projSimpleName(projectInfo[i][1]),
-      'data-zone' + i, 'data-zone' + i + 'A', 'data-zone' + i + 'B'); //Inserting on HTML page
+    //  'data-zone' + i, 'data-zone' + i + 'A', 'data-zone' + i + 'B' //Inserting on HTML page
+    );
   }
 
   setInterval(function() {
     for (i = 0;
       (i < projectInfo.length); i++) {
       dataKickstarter(projCreatorToUrl(projectInfo[i][0]), projTitleToUrl(projectInfo[i][1]), projSimpleName(projectInfo[i][1]),
-        'data-zone' + i, 'data-zone' + i + 'A', 'data-zone' + i + 'B'); //Inserting on HTML page
+    //    'data-zone' + i, 'data-zone' + i + 'A', 'data-zone' + i + 'B' //Inserting on HTML page
+      );
     }
-  }, 10000) //10000 = 10s, 60000 = 1m, 3600000 = 1h, 86400000 = 1d
+  }, 1000) //10000 = 10s, 60000 = 1m, 3600000 = 1h, 86400000 = 1d
 
 });
