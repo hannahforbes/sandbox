@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     setInterval(function()
       {
-        function dataKickstarter(projectCreator, projectTitle, projectName, dataZone1, dataZone2){
+        function dataKickstarter(projectCreator, projectTitle, projectName, dataZone1, dataZone2, dataZone3){
         $.ajax({
           url: 'https://www.kickstarter.com/projects/' + projectCreator + '/' + projectTitle + '/stats.json',
           context: document.body
@@ -10,17 +10,16 @@ $(document).ready(function() {
           var backers = result.project.backers_count;
           var pledged = result.project.pledged;
           var time = result.project.state_changed_at;
-          console.log(", " + projectName + ", " + "Backers = " + backers + ", ", "Pledged = " + pledged + ",");
+          console.log(", " + projectName + ", " +  backers + ", ",  + pledged);
           document.getElementById(dataZone1).innerHTML = "Backers = " + backers;
           document.getElementById(dataZone2).innerHTML = "Pledged = " + pledged;
+          document.getElementById(dataZone3).innerHTML = projectName;
         });
       }
-      dataKickstarter('mattbaker','timeline-of-world-history-poster-projects-of-earth', 'History Poster', 'data-zone1', 'data-zone2');
-      dataKickstarter('kellideas','turtle-rover-worlds-first-earth-rover', 'Turtle Rover', 'data-zone3', 'data-zone4');
-      // dataKickstarter($('#data-zone5').attr('data-url'), 'Orrery Lamp', 'data-zone5', 'data-zone6');
-      // dataKickstarter($('#data-zone7').attr('data-url'), 'Apricoat', 'data-zone7', 'data-zone8');
-      // dataKickstarter($('#data-zone9').attr('data-url'), 'Nise Wave', 'data-zone9', 'data-zone10');
-      // dataKickstarter($('#data-zone11').attr('data-url'), 'Wooden World Watch', 'data-zone11', 'data-zone12');
+      dataKickstarter('mattbaker','timeline-of-world-history-poster-projects-of-earth', 'History Poster', 'data-zone1', 'data-zone2', 'data-zoneA');
+      dataKickstarter('kellideas','turtle-rover-worlds-first-earth-rover', 'Turtle Rover', 'data-zone3', 'data-zone4', 'data-zoneB');
+      dataKickstarter('robjmadin','steamroller-album', 'Steam Roller', 'data-zone5', 'data-zone6', 'data-zoneC');
+      dataKickstarter('opengoldberg', 'libre-art-of-the-fugue', 'Libre Art of the Fugure', 'data-zone7', 'data-zone8', 'data-zoneD');
     }, 1000) //10000 = 10s
 
 });
