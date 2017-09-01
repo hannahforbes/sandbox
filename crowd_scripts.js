@@ -1,8 +1,14 @@
 $(document).ready(function() {
 
   //KS Info
-  var projectCreators = ['Matt Baker', 'Kell Ideas', 'Rob J Madin', 'Open Goldberg'];
-  var projectTitles = ["Timeline of World History Poster - Projects of Earth", "Turtle Rover - World's First Earth Rover", "Steamroller Album", "Libre Art of the Fugue"];
+  var projectInfo = [
+    ["Matt Baker", "Timeline of World History Poster - Projects of Earth"],
+    ["Kell Ideas", "Turtle Rover - World's First Earth Rover"],
+    ["Rob J Madin", "Steamroller Album"],
+    ["Open Goldberg", "Libre Art of the Fugue"]
+  ]
+  // var projectCreators = ['Matt Baker', 'Kell Ideas', 'Rob J Madin', 'Open Goldberg'];
+  // var projectTitles = ["Timeline of World History Poster - Projects of Earth", "Turtle Rover - World's First Earth Rover", "Steamroller Album", "Libre Art of the Fugue"];
 
   //Takes Project Title (copied from KS) and allows it to be inserted into url
   function projTitleToUrl(projTitle) {
@@ -68,15 +74,15 @@ $(document).ready(function() {
   }
 
   for (i = 0;
-    (i < projectTitles.length); i++) {
-    dataKickstarter(projCreatorToUrl(projectCreators[i]), projTitleToUrl(projectTitles[i]), projSimpleName(projectTitles[i]),
+    (i < projectInfo.length); i++) {
+    dataKickstarter(projCreatorToUrl(projectInfo[i][0]), projTitleToUrl(projectInfo[i][1]), projSimpleName(projectInfo[i][1]),
       'data-zone' + i, 'data-zone' + i + 'A', 'data-zone' + i + 'B'); //Inserting on HTML page
   }
 
   setInterval(function() {
     for (i = 0;
-      (i < projectTitles.length); i++) {
-      dataKickstarter(projCreatorToUrl(projectCreators[i]), projTitleToUrl(projectTitles[i]), projSimpleName(projectTitles[i]),
+      (i < projectInfo.length); i++) {
+      dataKickstarter(projCreatorToUrl(projectInfo[i][0]), projTitleToUrl(projectInfo[i][1]), projSimpleName(projectInfo[i][1]),
         'data-zone' + i, 'data-zone' + i + 'A', 'data-zone' + i + 'B'); //Inserting on HTML page
     }
   }, 10000) //10000 = 10s, 60000 = 1m, 3600000 = 1h, 86400000 = 1d
