@@ -37,27 +37,7 @@ $(document).ready(function() {
   //Takes Project Creator (copied from KS) and allows it to be inserted into url
   function projCreatorToUrl(projCreator) {
     //Allows a Project Creator's name to include a maximum of 5 words, while loop crashed browser
-    if (projCreator.indexOf(" ") > -1) {
-      var projCreatorSpaceRemove = projCreator.replace(" ", "").toLowerCase();
-    } else {
-      return projCreator;
-    }
-    if (projCreatorSpaceRemove.indexOf(" ") > -1) {
-      var projCreatorSpaceRemoveAgain = projCreatorSpaceRemove.replace(" ", "").toLowerCase();
-    } else {
-      return projCreatorSpaceRemove;
-    }
-    if (projCreatorSpaceRemoveAgain.indexOf(" ") > -1) {
-      var projCreatorSpaceRemoveAgainAgain = projCreatorSpaceRemoveAgain.replace(" ", "").toLowerCase();
-    } else {
-      return projCreatorSpaceRemoveAgain;
-    }
-
-    if (projCreatorSpaceRemoveAgainAgain.indexOf(" ") > -1) {
-      var projCreatorSpaceRemoveAgainAgainAgain = projCreatorSpaceRemoveAgainAgain.replace(" ", "").toLowerCase();
-    } else {
-      return projCreatorSpaceRemoveAgainAgain;
-    }
+    var projCreatorNoSpace = projCreator.replace(/ +/g, "");
   }
 
   //Simplifies/shortens name for data entry
