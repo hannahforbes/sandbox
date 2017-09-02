@@ -21,7 +21,7 @@ $(document).ready(function() {
 
   //Takes Project Title (copied from KS) and allows it to be inserted into url
   function projTitleToUrl(projTitle) {
-    var projPuncRemove = projTitle.replace("'", "");
+    var projPuncRemove = projTitle.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()']/g,""); //removes all punctuation
     if (projPuncRemove.indexOf('-') > -1) {
       var projTitleSplit = projPuncRemove.split(/\s*\-\s*/g);
       var projTitleSplitFirst = projTitleSplit[0].replace(/\s+/g, '-').toLowerCase();
