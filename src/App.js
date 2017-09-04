@@ -23,3 +23,5 @@ Title.propTypes = {
 }
 
 export default App
+
+//NEXT: Normalize Events with Reacts Synthetic Event System
