@@ -1,3 +1,4 @@
+//Demonstrating using stateless child components to change the state of parent components
 import React from 'react';
 
 class App extends React.Component{

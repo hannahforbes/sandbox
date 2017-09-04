@@ -1,3 +1,5 @@
+//Shows basics of components, state and props
+
 //1st Duplicate from App.js
 
 //As I go along the code is change and updated but in order to keep later versions of the code (that demonstrate the basics), I have duplicated the page

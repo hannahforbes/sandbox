@@ -1,3 +1,5 @@
+//Demonstrates buttons and nested components
+
 import React from 'react';
 
 class App extends React.Component{
@@ -5,7 +7,7 @@ class App extends React.Component{
     return <Button>I <Heart /> React</Button>
   }
 }
-//"<Heart />" has been nested in the button component 
+//"<Heart />" has been nested in the button component
 
 //stateless component
 const Button = (props) => <button>{props.children}</button>
