@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
   //KS Info
+  //window.location - grabs information from the url e.g components of the url displayed as an object
+  //e.g. window.location.pathname = actual pathname that I could use to access json url
   var projectInfo = [
     //Project names need all other punctuation (colons, exclataion points, full stops, commas etc.) removing
     //and can not be over 50 characters
