@@ -4,7 +4,7 @@
   "description": "A project focusing on React and related tools",
   "main": "index.js",
   "scripts": {
-    "scripts": "httpster -d ./dist -p 3000"
+    "start": "httpster -d ./dist -p 3000"
 
   },
   "author": "Hannah Forbes",

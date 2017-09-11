@@ -1,0 +1,39 @@
+React is a javascript library that is used to create UIs
+We create useable components and these components display data as it changes over time
+Since 2013 (when React was created), it has been expanded to Reactive Native which is for mobile
+
+//Inspecting React Sites
+Added a couple of extensions to the browser...
+React detector: react symbol on search bar, shows blue when page is using react
+React developer: allows you to see which components are being used on a react webpage
+N.B.: Use cmd + alt + j to open developer tools on mac
+
+//Efficient rendering with React
+The DOM is the structure of HTML elements that make up a webpage
+The DOM API refers to how these page elements are accessed and changed
+React made updating the DOM faster by using DOM Diffing
+DOM Diffing happens when you compare the currently rendered content with the new UI changes that are about to be made
+React optimizes this by making only the minimal changes necessary
+React compares JavaScript objects instead of always writing to or reading from the DOM
+In normal circumstance:
+    JavaScript Logic is interacting with the DOM to make updates
+    Using functions such as getElementById you are READING from the DOM
+    When you change any of those .e.g change classes, change content... you are WRITING to the DOM
+Reading & Writing to DOM is slow, dealing with JS Objects is faster
+Using React is like adding a layer in between JS Logic and DOM called the "React DOM"
+All changed from JS Logic are read/written to React DOM and then React DOM reads/writes only necessary changes to the actual DOM
+We never read from the actual DOM (only the React DOM) and we only write to it when changes are required
+
+[...]
+
+//Building with Webpack
+In previous videos we looked at how the Babel CLI can help us transpile JavaScript that uses new syntax into static files that uses browser-supported syntax
+This approach offers performance benefits in the browser because all transpiling happens before run time
+As an alternative to this we can use module bundlers like Webpack to handle some of this work for us
+Webpack is a module bundler that helps us create static files and helps us automate processes that need to happen before our files can go into production
+Think about one typical html file, we might load several different scripts, making several HTTP requests
+Webpack will run several commands at a time to create a bundle file
+This bundle packages scripts, dependancies and even CSS into one file
+...and one file means one request
+
+The first thing we need to do to use webpack is we're going to create a webpack config file
