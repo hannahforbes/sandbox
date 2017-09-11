@@ -1,0 +1,11 @@
+/*In this file we will set up all of the presets (everything we want to transpile)*/
+
+{
+  "presets": ["latest", "react", "stage-0"]
+}
+
+/*'latest' will transpile anything from ES2015, 2016 and 2017 that's been accepted*/
+/*'react' will transpile our JSX*/
+/*'stage-0' will run anything that has been PROPOSED as an ECMA script feature*/
+
+/*These all need to be installed via npm: npm install --save-dev babel-preset-latest babel-preset-react babel-preset-stage-0*/

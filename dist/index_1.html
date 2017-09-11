@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://fb.me/react-15.1.0.js"></script>
+    <script src="https://fb.me/react-dom-15.1.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.38/browser.js"></script>
+    <!-- Inserting Babel this way is fine for short projects or testing but in projects you'll want to transpile your scripts BEFORE you get to the browser -->
+    <meta charset="UTF-8">
+    <title>Hello World with React</title>
+</head>
+<body>
+    <div id="react-container"></div>
+    <!-- This provides the element we will read 'title' onto -->
+    <script type="text/babel" src="index.js"></script>
+    <!-- This links to our js file -->
+    <!-- The "type='text/babel'" ensures that the content in THIS script will be run through a transpiler -->
+</body>
+</html>
