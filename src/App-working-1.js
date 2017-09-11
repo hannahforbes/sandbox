@@ -82,3 +82,5 @@ App.defaultProps = {
 }
 
 export default App
+
+//COURSE WAS DELETED BY EGGHEAD.IO first-react-app finished here
